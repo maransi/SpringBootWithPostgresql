@@ -1,0 +1,41 @@
+<!--
+Page index.html will be default if one this possibilities:
+
+Solution 1: index.html page inside public
+create an index.html page inside resources/public/index.html
+
+Solution 2: index.html page inside static
+create an index.html page inside resources/static/index.html
+
+Solution 3: Using controller Mapping
+Create a controller with@RequestMapping("/") which will return view name but for this requires any view configuration. Here is spring boot jsp example
+
+package com.javadeveloperzone.controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+/**
+ * Created by Java Developer Zone on 19-07-2017.
+ */
+@Controller
+public class IndexController {
+    @RequestMapping("/")
+    public String index() {
+        return "Spring Boot Example";
+    }
+}
+-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="showCities">Show cities</a>
+    </body>
+</html>
